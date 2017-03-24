@@ -68,7 +68,7 @@ The data show the mass of the leaves of the handling controls that were placed i
 
 * CN.AFDM.disc = the estimated AFDM of each CN leaf disc (g).
 
-* CN.prop.OM = the proportion of organic matter in the 10 leaf discs in each sample (LOI-550).
+* CN.prop.OM = the proportion of organic matter in the leaf discs in each sample (LOI-550).
 
 * AFDM = the total ash-free-dry-mass of the sample including the leaf matter removed for CN analysis (g).
 
@@ -94,7 +94,7 @@ The data show the mass of the leaves of the handling controls that were placed i
     CN.cruc.ash <- c(12.2475, 11.9930, 12.9373, 12.9981, 11.6702, 12.2005, 11.8929, 12.6043, 11.7858)
     CN.ash.mass <- CN.cruc.ash - CN.cruc.mass
     CN.AFDM.samp <- CN.leaf.mass - CN.ash.mass
-    CN.leaf.num <- rep(10, 9)
+    CN.leaf.num <- rep(5, 9)
     CN.AFDM.disc <- CN.AFDM.samp / CN.leaf.num
     CN.prop.OM <- (CN.leaf.mass - CN.ash.mass) / CN.leaf.mass
     AFDM <- AFDM.wo.discs + CN.AFDM.samp
