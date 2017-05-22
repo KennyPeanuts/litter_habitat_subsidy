@@ -1,0 +1,10 @@
+site,litter,rep,Ancl,Caen,Cerato,Chiro,Coen,Gyralus,Hydrop,Hydra,Oligo,Ortho,Tany
+COND.B,COND,B,1,0,0,10,0,1,1,1,0,4,0
+COND.A,COND,A,0,4,0,2,0,5,0,0,0,4,0
+COND.C,COND,C,0,0,0,6,2,12,2,0,0,0,0
+BAG.A,BAG,A,0,3,0,4,0,0,0,0,0,4,1
+BAG.B,BAG,B,0,0,0,0,0,0,0,0,0,0,0
+BAG.C,BAG,C,0,0,1,5,0,0,1,0,9,0,0
+UC.A,UC,A,1,1,1,7,0,1,1,0,0,1,0
+UC.C,UC,C,0,0,0,3,1,5,0,0,1,5,0
+UC.B,UC,B,0,0,0,9,0,3,3,0,14,8,0
