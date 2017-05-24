@@ -64,9 +64,14 @@ litter     2 253.56 126.778  4.8143 0.05658 .
 Residuals  6 158.00  26.333      
 
 ~~~~
+  
+    x <- factor(bugs.wormless$litter, levels = c("BAG", "UC", "COND")) # this reorders the litter types by palitability on the x-axis
 
     par(las = 1)
-    plot(sum ~ litter, data = bugs.wormless, ylab = "Total Abundance")
+    plot(sum ~ x, data = bugs.wormless, ylab = "Total Abundance", xlab = "Litter Type", col = "lightblue", axes = F)
+    axis(2)
+    axis(1, c("Inedible", "Un-Conditioned", "Conditioned"), at = c(1, 2, 3))
+    box()
     dev.copy(jpeg, "./output/plots/total_abun_by_litter.jpg")
     dev.off()
 
