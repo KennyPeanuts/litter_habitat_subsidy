@@ -18,7 +18,7 @@ The description of the experiment can be found in [https://github.com/KennyPeanu
     bugs <- read.table("./data/bugs_2017.csv", header = T, sep = ",")
     
 ### Import Matrix
-    bug.mat <- as.matrix(read.table("./bugs_matrix_2017.csv", header = T, sep = ","))
+    bug.mat <- as.matrix(read.table("./data/bugs_matrix_2017.csv", header = T, sep = ","))
     
 ## Matrix Analysis
 
@@ -32,8 +32,8 @@ The oligochates were not reliably sampled so they are removed from the dataset
     
     par(las = 1)
     barplot(t(bug.mat.wormless), col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), ylim = c(0, 30), ylab = "Abundance", space = c(0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0)) # t transposes the matrix so that site is on the x-axis
-    axis(1, c("Conditioned", "Inedible", "Un-conditioned"), at = c(1.5, 5.5, 9.5))    
-    legend(4, 29, c("Limpet", "Caenidae", "Ceratopogonia", "Chironominae", "Coenagrionidae", "Gyralus", "Hydroptilidae", "Hydra", "Orthocladinae", "Tanypodinae"), lty = 1, lwd = 10, col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), cex = 0.85)
+    axis(1, c("Inedible", "Un-conditioned", "Conditioned"), at = c(1.5, 5.5, 9.5))    
+    legend(0.5, 29, c("Limpet", "Caenidae", "Ceratopogonia", "Chironominae", "Coenagrionidae", "Gyralus", "Hydroptilidae", "Hydra", "Orthocladinae", "Tanypodinae"), lty = 1, lwd = 10, col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), cex = 0.85)
     dev.copy(jpeg, "./output/plots/bugs_stacked_bar.jpg")
     dev.off()
 

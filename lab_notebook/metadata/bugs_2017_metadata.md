@@ -57,21 +57,21 @@ The data show the type and abundance of animals recovered from the leaf packs at
 
 ## Data Entry
 
-    site <- c("COND.B", "COND.A", "COND.C", "BAG.A", "BAG.B", "BAG.C", "UC.A", "UC.C", "UC.B")
-    litter <- c("COND", "COND", "COND", "BAG", "BAG", "BAG", "UC", "UC", "UC")
-    rep <- c("B", "A", "C", "A", "B", "C", "A", "C", "B")
+    site <- c("BAG.A", "BAG.B", "BAG.C", "UC.A", "UC.C", "UC.B", "COND.B", "COND.A", "COND.C")
+    litter <- c("BAG", "BAG", "BAG", "UC", "UC", "UC", "COND", "COND", "COND")
+    rep <- c("A", "B", "C", "A", "C", "B", "B", "A", "C")
     # Taxa
-    Ancl <- c(1, 0, 0, 0, 0, 0, 1, 0, 0)
-    Caen <- c(0, 4, 0, 3, 0, 0, 1, 0, 0) 
-    Cerato <- c(0, 0, 0, 0, 0, 1, 1, 0, 0)
-    Chiro <- c(10, 2, 6, 4, 0, 5, 7, 3, 9)
-    Coen <- c(0, 0, 2, 0, 0, 0, 0, 1, 0)
-    Gyralus <- c(1, 5, 12, 0, 0, 0, 1, 5, 3)
-    Hydrop <- c(1, 0, 2, 0, 0, 1, 1, 0, 3)
-    Hydra <- c(1, 0, 0, 0, 0, 0, 0, 0, 0)
-    Oligo <- c(0, 0, 0, 0, 0, 9, 0, 1, 14)
-    Ortho <- c(4, 4, 0, 4, 0, 0, 1, 5, 8)
-    Tany <- c(0, 0, 0, 1, 0, 0, 0, 0, 0)
+    Ancl <- c(0, 0, 0, 1, 0, 0, 1, 0, 0)
+    Caen <- c(3, 0, 0, 1, 0, 0, 0, 4, 0) 
+    Cerato <- c(0, 0, 1, 1, 0, 0, 0, 0, 0)
+    Chiro <- c(4, 0, 5, 7, 3, 9, 10, 2, 6)
+    Coen <- c(0, 0, 0, 0, 1, 0, 0, 0, 2)
+    Gyralus <- c(0, 0, 0, 1, 5, 3, 1, 5, 12)
+    Hydrop <- c(0, 0, 1, 1, 0, 3, 1, 0, 2)
+    Hydra <- c(0, 0, 0, 0, 0, 0, 1, 0, 0)
+    Oligo <- c(0, 0, 9, 0, 1, 14, 0, 0, 0)
+    Ortho <- c(4, 0, 0, 1, 5, 8, 4, 4, 0)
+    Tany <- c(1, 0, 0, 0, 0, 0, 0, 0, 0)
     
      
 ### Make Data Frame
@@ -94,3 +94,4 @@ The sites are in the same order as they were in the original data.frame
 ### Matrix
 
     write.table(bug.mat, "./data/bugs_matrix_2017.csv", row.names = F, quote = F, sep = ",")
+
