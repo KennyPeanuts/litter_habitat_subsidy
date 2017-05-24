@@ -44,7 +44,7 @@ The description of the experiment can be found in [https://github.com/KennyPeanu
     dev.copy(jpeg, "./output/plots/CN_by_litter.jpg")
     dev.off()
 
-![CN for each litter type](../output/plots/CN_by_liiter.jpg)
+![CN for each litter type](../output/plots/CN_by_litter.jpg)
 
 #### Percent N
 
@@ -56,7 +56,7 @@ The description of the experiment can be found in [https://github.com/KennyPeanu
     dev.copy(jpeg, "./output/plots/percN_by_litter.jpg")
     dev.off()
 
-![CN for each litter type](../output/plots/percN_by_liiter.jpg)
+![Percent N for each litter type](../output/plots/percN_by_litter.jpg)
 
     percN.aov <- aov(percN ~ type, data = litter)
     summary(percN.aov)
@@ -90,7 +90,7 @@ UC-COND  0.1500000 -0.3255550 0.625555 0.6215779
     dev.copy(jpeg, "./output/plots/percC_by_litter.jpg")
     dev.off()
 
-![CN for each litter type](../output/plots/percC_by_liiter.jpg)
+![Percent C for each litter type](../output/plots/percC_by_litter.jpg)
 
     percC.aov <- aov(percC ~ type, data = litter)
     summary(percC.aov)
