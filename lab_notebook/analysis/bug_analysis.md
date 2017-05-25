@@ -30,10 +30,10 @@ The oligochates were not reliably sampled so they are removed from the dataset
 
 ### Plot of relative abundance
     
-    par(las = 1)
-    barplot(t(bug.mat.wormless), col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), ylim = c(0, 30), ylab = "Abundance", space = c(0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0)) # t transposes the matrix so that site is on the x-axis
+    par(las = 1, oma = c(0.5, 0.5, 0.5, 0.5))
+    barplot(t(bug.mat.wormless), col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), ylim = c(0, 30), xlab = "Litter Type", ylab = "Abundance", space = c(0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0)) # t transposes the matrix so that site is on the x-axis
     axis(1, c("Inedible", "Un-conditioned", "Conditioned"), at = c(1.5, 5.5, 9.5))    
-    legend(0.5, 29, c("Limpet", "Caenidae", "Ceratopogonia", "Chironominae", "Coenagrionidae", "Gyralus", "Hydroptilidae", "Hydra", "Orthocladinae", "Tanypodinae"), lty = 1, lwd = 10, col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), cex = 0.85)
+    legend(0.3, 29, c("Limpet", "Caenidae", "Ceratopogonia", "Chironominae", "Coenagrionidae", "Gyralus", "Hydroptilidae", "Hydra", "Orthocladinae", "Tanypodinae"), lty = 1, lwd = 10, col = c("gray50", "lightgoldenrod", "palegreen", "mediumpurple1", "orange", "lavenderblush2", "steelblue1", "yellow3", "sienna1", "thistle1"), cex = 0.7)
     dev.copy(jpeg, "./output/plots/bugs_stacked_bar.jpg")
     dev.off()
 
@@ -67,8 +67,8 @@ Residuals  6 158.00  26.333
   
     x <- factor(bugs.wormless$litter, levels = c("BAG", "UC", "COND")) # this reorders the litter types by palitability on the x-axis
 
-    par(las = 1)
-    plot(sum ~ x, data = bugs.wormless, ylab = "Total Abundance", xlab = "Litter Type", col = "lightblue", axes = F)
+    par(las = 1, oma = c(0.5, 0.5, 0.5, 0.5))
+    plot(sum ~ x, data = bugs.wormless, ylim = c(0, 30), ylab = "Total Abundance", xlab = "Litter Type", col = "mediumpurple1", axes = F)
     axis(2)
     axis(1, c("Inedible", "Un-Conditioned", "Conditioned"), at = c(1, 2, 3))
     box()

@@ -36,13 +36,13 @@ The description of the experiment can be found in [https://github.com/KennyPeanu
 
 #### CN
 
-    par(las = 1)
+    par(las = 1, oma = c(0.5, 0.5, 0.5, 0.5))
     plot(CN ~ x, data = litter, ylim = c(0, 600), ylab = "C:N", xlab = "Litter Type", col = "orange", axes = F)
     axis(2)
     axis(1, c("Inedible", "Un-Conditioned", "Conditioned"), at = c(1, 2, 3))
     box()
-    dev.copy(jpeg, "./output/plots/CN_by_litter.jpg")
-    dev.off()
+    #dev.copy(jpeg, "./output/plots/CN_by_litter.jpg")
+    #dev.off()
 
 ![CN for each litter type](../output/plots/CN_by_litter.jpg)
 
